@@ -5966,7 +5966,7 @@ if (budy2.includes("mkmnet2")){
 
   //EQUIPEVIP\\
 
-    if (budy2.includes("1pessoa")){
+    if (budy2.includes("equipevip1")){
       if(!SoDono) return reply("Só dono...")
       var nomor = info.participant
       sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
@@ -5981,7 +5981,7 @@ if (budy2.includes("mkmnet2")){
       sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
       }
       
-      if (budy2.includes("2pessoa")){
+      if (budy2.includes("equipevip2")){
         if(!SoDono) return reply("Só dono...")
         var nomor = info.participant
         sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
@@ -5996,7 +5996,7 @@ if (budy2.includes("mkmnet2")){
         sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
         }
       
-        if (budy2.includes("3pessoa")){
+        if (budy2.includes("equipevip3")){
           if(!SoDono) return reply("Só dono...")
           var nomor = info.participant
           sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
