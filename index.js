@@ -5923,7 +5923,7 @@ if (budy2.includes("mkmnet1")){
 if(!SoDono) return reply("Só dono...")
 var nomor = info.participant
 sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
-await conn.sendMessage(`559295333643@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+await conn.sendMessage(`5562992564335@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
 server = await fetchJson(`https://api.gestorvip.com/mkmnet/1.php`)
 if (server.error) return reply(server.error)
 botaoale = [
@@ -5938,7 +5938,7 @@ if (budy2.includes("mkmnet2")){
   if(!SoDono) return reply("Só dono...")
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
-  await conn.sendMessage(`559295333643@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+  await conn.sendMessage(`5562992564335@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
   server = await fetchJson(`https://api.gestorvip.com/mkmnet/2.php`)
   if (server.error) return reply(server.error)
   botaoale = [
@@ -5953,7 +5953,7 @@ if (budy2.includes("mkmnet2")){
     if(!SoDono) return reply("Só dono...")
     var nomor = info.participant
     sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
-    await conn.sendMessage(`559295333643@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+    await conn.sendMessage(`5562992564335@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
     server = await fetchJson(`https://api.gestorvip.com/mkmnet/3.php`)
     if (server.error) return reply(server.error)
     botaoale = [
