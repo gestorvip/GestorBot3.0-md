@@ -58,7 +58,7 @@ blocked = []
 
 hitt = []
 
-keyale = "nao-definido"
+keyale = "key-diego-ssh-ofc-2.0"
 
 //=====================================\\
 
@@ -1763,24 +1763,33 @@ break
 case 'gerarteste':
 if(!SoDono) return reply("Só dono...")
 await conn.sendMessage(q, {text: `Seu Teste foi aceito pelo adm, aguarde um momento...`})
-server = await fetchJson(`https://api.gestorvip.com/mkmnet/free.php`)
+server = await fetchJson(`https://api.gestorvip.com/adm/free.php`)
 if (server.error) return reply(server.error)
-  ccg =
-  `
-  ➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}
-  ➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}
-  
-
-  ‣ 🔥LIMITE: ${server.limit}
-  
-  ➥ MENSAGEM DO ADM: ${server.message}\n`
-  await conn.sendMessage(q, {text: ccg,},{quoted:info, quoted: selo})
+botaoale = [
+{title: "CONTA GERADA",
+rows: [
+{title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
+{title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Dono"}]
+}]
+sendlistA(q, "━━━━━━━━━━━━━━━━━", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "MENU SSH", botaoale)
 break
 
 
 case 'recusarteste':
 if(!SoDono) return reply("Só dono...")
 conn.sendMessage(q, {text: `Olá Amigo(a), sinto muito dizer, mas seu Teste para SSH foi recusado 🥺, Talvez você ja tenha solicitado outro teste dentro de 30 Dias,  caso deseje adiquirir um plano mensal acesse o menu principal`})
+break
+
+case 'apissh2':
+  server = await fetchJson(`https://api.gestorvip.com/adm/free.php`)
+  if (server.error) return reply(server.error)
+botaoale = [
+{title: "MENUS ÚTEIS",
+rows: [
+{title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
+{title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Dono"}]
+}]
+sendlistA(from, "━━━━━━━━━━━━━━━━━", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "MENU SSH", botaoale)
 break
 
 //fim do teste ssh
@@ -3251,7 +3260,7 @@ break
 case 'reagir':
 const reactionMessage = {
 react: {
-text: "💖",
+text: "❤️",
 key: info.key
 }
 }
@@ -5907,6 +5916,335 @@ setTimeout( () => {
 //INICIO DE COMANDOS SEM PREFIXO
 switch(testat){
 }
+
+ //MKMNET\\
+
+if (budy2.includes("mkmnet1")){
+if(!SoDono) return reply("Só dono...")
+var nomor = info.participant
+sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+await conn.sendMessage(`559295333643@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+server = await fetchJson(`https://api.gestorvip.com/mkmnet/1.php`)
+if (server.error) return reply(server.error)
+botaoale = [
+{title: "Qualquer Dúvida contate seu provedor",
+rows: [
+{title: "Obrigado", rowId: `${prefix}reagir`}]
+}]
+sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+}
+
+if (budy2.includes("mkmnet2")){
+  if(!SoDono) return reply("Só dono...")
+  var nomor = info.participant
+  sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+  await conn.sendMessage(`559295333643@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+  server = await fetchJson(`https://api.gestorvip.com/mkmnet/2.php`)
+  if (server.error) return reply(server.error)
+  botaoale = [
+  {title: "Qualquer Dúvida contate seu provedor",
+  rows: [
+  {title: "Obrigado", rowId: `${prefix}reagir`}]
+  }]
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  }
+
+  if (budy2.includes("mkmnet3")){
+    if(!SoDono) return reply("Só dono...")
+    var nomor = info.participant
+    sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+    await conn.sendMessage(`559295333643@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+    server = await fetchJson(`https://api.gestorvip.com/mkmnet/3.php`)
+    if (server.error) return reply(server.error)
+    botaoale = [
+    {title: "Qualquer Dúvida contate seu provedor",
+    rows: [
+    {title: "Obrigado", rowId: `${prefix}reagir`}]
+    }]
+    sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+    }
+
+  //EQUIPEVIP\\
+
+    if (budy2.includes("1pessoa")){
+      if(!SoDono) return reply("Só dono...")
+      var nomor = info.participant
+      sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+      await conn.sendMessage(`559291796111@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+      server = await fetchJson(`https://api.gestorvip.com/adm/1.php`)
+      if (server.error) return reply(server.error)
+      botaoale = [
+      {title: "Qualquer Dúvida contate seu provedor",
+      rows: [
+      {title: "Obrigado", rowId: `${prefix}reagir`}]
+      }]
+      sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+      }
+      
+      if (budy2.includes("2pessoa")){
+        if(!SoDono) return reply("Só dono...")
+        var nomor = info.participant
+        sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+        await conn.sendMessage(`559291796111@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+        server = await fetchJson(`https://api.gestorvip.com/adm/2.php`)
+        if (server.error) return reply(server.error)
+        botaoale = [
+        {title: "Qualquer Dúvida contate seu provedor",
+        rows: [
+        {title: "Obrigado", rowId: `${prefix}reagir`}]
+        }]
+        sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+        }
+      
+        if (budy2.includes("3pessoa")){
+          if(!SoDono) return reply("Só dono...")
+          var nomor = info.participant
+          sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+          await conn.sendMessage(`559291796111@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+          server = await fetchJson(`https://api.gestorvip.com/adm/3.php`)
+          if (server.error) return reply(server.error)
+          botaoale = [
+          {title: "Qualquer Dúvida contate seu provedor",
+          rows: [
+          {title: "Obrigado", rowId: `${prefix}reagir`}]
+          }]
+          sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+          }
+
+          if (budy2.includes("plano1dia")){
+            if(!SoDono) return reply("Só dono...")
+            var nomor = info.participant
+            sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+            await conn.sendMessage(`559291796111@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+            server = await fetchJson(`https://api.gestorvip.com/adm/dia.php`)
+            if (server.error) return reply(server.error)
+            botaoale = [
+            {title: "Qualquer Dúvida contate seu provedor",
+            rows: [
+            {title: "Obrigado", rowId: `${prefix}reagir`}]
+            }]
+            sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+            }
+
+          //NETDOLEO\\
+
+    if (budy2.includes("Netdoleo1")){
+      if(!SoDono) return reply("Só dono...")
+      var nomor = info.participant
+      sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+      await conn.sendMessage(`553298691128@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+      server = await fetchJson(`https://api.gestorvip.com/netturbo/1.php`)
+      if (server.error) return reply(server.error)
+      botaoale = [
+      {title: "Qualquer Dúvida contate seu provedor",
+      rows: [
+      {title: "Obrigado", rowId: `${prefix}reagir`}]
+      }]
+      sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+      }
+      
+      if (budy2.includes("Netdoleo2")){
+        if(!SoDono) return reply("Só dono...")
+        var nomor = info.participant
+        sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+        await conn.sendMessage(`553298691128@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+        server = await fetchJson(`https://api.gestorvip.com/netturbo/2.php`)
+        if (server.error) return reply(server.error)
+        botaoale = [
+        {title: "Qualquer Dúvida contate seu provedor",
+        rows: [
+        {title: "Obrigado", rowId: `${prefix}reagir`}]
+        }]
+        sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+        }
+
+//vianet\\
+
+if (budy2.includes("vianet1")){
+  if(!SoDono) return reply("Só dono...")
+  var nomor = info.participant
+  sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+  await conn.sendMessage(`553398417046@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+  server = await fetchJson(`https://api.gestorvip.com/vianet/1.php`)
+  if (server.error) return reply(server.error)
+  botaoale = [
+  {title: "Qualquer Dúvida contate seu provedor",
+  rows: [
+  {title: "Obrigado", rowId: `${prefix}reagir`}]
+  }]
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  }
+  
+  if (budy2.includes("vianet2")){
+    if(!SoDono) return reply("Só dono...")
+    var nomor = info.participant
+    sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+    await conn.sendMessage(`553398417046@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+    server = await fetchJson(`https://api.gestorvip.com/vianet/2.php`)
+    if (server.error) return reply(server.error)
+    botaoale = [
+    {title: "Qualquer Dúvida contate seu provedor",
+    rows: [
+    {title: "Obrigado", rowId: `${prefix}reagir`}]
+    }]
+    sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+    }
+  
+    if (budy2.includes("vianet3")){
+      if(!SoDono) return reply("Só dono...")
+      var nomor = info.participant
+      sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+      await conn.sendMessage(`553398417046@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+      server = await fetchJson(`https://api.gestorvip.com/vianet/3.php`)
+      if (server.error) return reply(server.error)
+      botaoale = [
+      {title: "Qualquer Dúvida contate seu provedor",
+      rows: [
+      {title: "Obrigado", rowId: `${prefix}reagir`}]
+      }]
+      sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+      }
+
+      //SSHFOX\\
+
+if (budy2.includes("sshfox1")){
+  if(!SoDono) return reply("Só dono...")
+  var nomor = info.participant
+  sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+  await conn.sendMessage(`553398417046@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+  server = await fetchJson(`https://api.gestorvip.com/sshfox/1.php`)
+  if (server.error) return reply(server.error)
+  botaoale = [
+  {title: "Qualquer Dúvida contate seu provedor",
+  rows: [
+  {title: "Obrigado", rowId: `${prefix}reagir`}]
+  }]
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  }
+  
+  if (budy2.includes("sshfox2")){
+    if(!SoDono) return reply("Só dono...")
+    var nomor = info.participant
+    sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+    await conn.sendMessage(`553398417046@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+    server = await fetchJson(`https://api.gestorvip.com/sshfox/2.php`)
+    if (server.error) return reply(server.error)
+    botaoale = [
+    {title: "Qualquer Dúvida contate seu provedor",
+    rows: [
+    {title: "Obrigado", rowId: `${prefix}reagir`}]
+    }]
+    sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+    }
+  
+    if (budy2.includes("sshfox3")){
+      if(!SoDono) return reply("Só dono...")
+      var nomor = info.participant
+      sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+      await conn.sendMessage(`553398417046@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+      server = await fetchJson(`https://api.gestorvip.com/sshfox/3.php`)
+      if (server.error) return reply(server.error)
+      botaoale = [
+      {title: "Qualquer Dúvida contate seu provedor",
+      rows: [
+      {title: "Obrigado", rowId: `${prefix}reagir`}]
+      }]
+      sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+      }
+
+      //ultranet\\
+
+if (budy2.includes("ultranet1")){
+  if(!SoDono) return reply("Só dono...")
+  var nomor = info.participant
+  sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+  await conn.sendMessage(`556286422916@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+  server = await fetchJson(`https://api.gestorvip.com/ultranet/1.php`)
+  if (server.error) return reply(server.error)
+  botaoale = [
+  {title: "Qualquer Dúvida contate seu provedor",
+  rows: [
+  {title: "Obrigado", rowId: `${prefix}reagir`}]
+  }]
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  }
+  
+  if (budy2.includes("ultranet2")){
+    if(!SoDono) return reply("Só dono...")
+    var nomor = info.participant
+    sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+    await conn.sendMessage(`556286422916@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+    server = await fetchJson(`https://api.gestorvip.com/ultranet/2.php`)
+    if (server.error) return reply(server.error)
+    botaoale = [
+    {title: "Qualquer Dúvida contate seu provedor",
+    rows: [
+    {title: "Obrigado", rowId: `${prefix}reagir`}]
+    }]
+    sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+    }
+  
+    if (budy2.includes("ultranet3")){
+      if(!SoDono) return reply("Só dono...")
+      var nomor = info.participant
+      sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+      await conn.sendMessage(`556286422916@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+      server = await fetchJson(`https://api.gestorvip.com/ultranet/3.php`)
+      if (server.error) return reply(server.error)
+      botaoale = [
+      {title: "Qualquer Dúvida contate seu provedor",
+      rows: [
+      {title: "Obrigado", rowId: `${prefix}reagir`}]
+      }]
+      sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+      }
+
+      //5gforce\\
+
+if (budy2.includes("5gforce1")){
+  if(!SoDono) return reply("Só dono...")
+  var nomor = info.participant
+  sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+  await conn.sendMessage(`5511984057451@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+  server = await fetchJson(`https://api.gestorvip.com/5gforce/1.php`)
+  if (server.error) return reply(server.error)
+  botaoale = [
+  {title: "Qualquer Dúvida contate seu provedor",
+  rows: [
+  {title: "Obrigado", rowId: `${prefix}reagir`}]
+  }]
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  }
+  
+  if (budy2.includes("5gforce2")){
+    if(!SoDono) return reply("Só dono...")
+    var nomor = info.participant
+    sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+    await conn.sendMessage(`5511984057451@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+    server = await fetchJson(`https://api.gestorvip.com/ultranet/2.php`)
+    if (server.error) return reply(server.error)
+    botaoale = [
+    {title: "Qualquer Dúvida contate seu provedor",
+    rows: [
+    {title: "Obrigado", rowId: `${prefix}reagir`}]
+    }]
+    sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+    }
+  
+    if (budy2.includes("5gforce3")){
+      if(!SoDono) return reply("Só dono...")
+      var nomor = info.participant
+      sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
+      await conn.sendMessage(`5511984057451@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
+      server = await fetchJson(`https://api.gestorvip.com/5gforce/3.php`)
+      if (server.error) return reply(server.error)
+      botaoale = [
+      {title: "Qualquer Dúvida contate seu provedor",
+      rows: [
+      {title: "Obrigado", rowId: `${prefix}reagir`}]
+      }]
+      sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+      }
 
 if(messagesC.includes('exec')) {
 if(!SoDono && !isnit && !issupre && !ischyt) return
