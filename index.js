@@ -3547,7 +3547,7 @@ if (budy2.includes("equipevip2")){
 
         //plano3\\
 	  
-if (budy2.includes("equipevip1")){
+if (budy2.includes("equipevip3")){
   if(!SoDono) return reply("Só dono...")
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
