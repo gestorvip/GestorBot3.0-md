@@ -1,23 +1,23 @@
+Download do termux apk , o da play store não presta
 
-VIDEO QUE É NESCESSARIO PARA OS COMANDOS BÁSICOS DO TERMUX, MAS ELES AINDA NÃO SÃO DE SUMA IMPORTÂNCIA PARA O BOT, MAS SIM PARA A INICIALIZAÇÃO DELE, O TERMUX NÃO É UM BOT OU O BOT, SÓ DEIXAR ISSO CLARO...
+https://drive.google.com/file/d/1vmyqpMuvnHeXwPUbFzgBOIqQ12bf2Jg4/view?usp=sharing
 
-VIDEO : https://youtu.be/OiWcm9INzXE
---------------------_-
+Comandos , digite os comandos de 1 por um para não haver erros
 
-APÓS OS COMANDOS BÁSICOS DO TERMUX SÓ ENTRAR NO TERMUX E DA ESSE COMANDO PARA INSTALAR A PASTA NO ARMAZENAMENTO INTERNO :
+pkg update -y && pkg upgrade -y
 
-1_ COMANDO :
+pkg install git -y
 
-cd /sdcard && git clone https://github.com/NuevaGeneracionALB/aleatory-md.git && cd aleatory-md
+pkg install nodejs -y
 
-COLE EXATAMENTE DESSA FÓRMA E JUNTO ASSIM..
+termux-setup-storage
 
-2_ COMANDO :
+cd /sdcard && git clone https://github.com/gestorvip/GestorBot3.0-md.git && cd GestorBot3.0-md
+
+npm install
 
 sh start.sh
 
-
 ESSE COMANDO É PARA LIGAR, AE VAI GERAR O QRCODE, VOCÊ PRECISARÁ DE UM SEGUNDO CELULAR PARA TIRAR FOTO DO QRCODE, LÓGO DEPOIS, ESCANEAR A FOTO QUE TIROU COM UM WHATSAPP SECUNDÁRIO QUE CONTENHA UM NÚMERO CLARO.., PARA ELE SERVIR DE BOT..
 QUALQUER PROBLEMA QUE CONTER, ENTRA NO GRUPO DO COMENTÁRIO FIXADO, DO VIDEO MAIS ATUALIZADO, IREI ATUALIZAR SEMPRE QUE EU PODER..
-# aleatory-md
-# aleatory-md
+# GESTORBOT 3.0
