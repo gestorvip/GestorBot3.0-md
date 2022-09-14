@@ -41,23 +41,23 @@ hitt = []
 
 
 //plano1\\
-keyapissh = "https://api.gestorvip.com/adm/1.php"
+keyapissh = "https://api.gestorvip.com/teste/1.php"
 valor1 = "R$ 10"
 linkpag ="https://my.gestorvip.com/p/OTUxMQ"
 
 
 //plano2\\
-keyapissh2 = "https://api.gestorvip.com/adm/2.php"
+keyapissh2 = "https://api.gestorvip.com/teste/2.php"
 valor2 = "R$ 15"
 linkpag2 ="https://my.gestorvip.com/p/OTUxMg"
 
 //plano3\\
-keyapissh3 = "https://api.gestorvip.com/adm/2.php"
+keyapissh3 = "https://api.gestorvip.com/teste/2.php"
 valor3 = "R$ 30"
 linkpag3 ="https://my.gestorvip.com/p/OTUyOQ"
 
 //testessh\\
-keyapissh4 = "https://api.gestorvip.com/adm/free.php"
+keyapissh4 = "https://api.gestorvip.com/teste/free.php"
 
 //link do aplicativo de conexão\\
 linkapp = "https://equipevip.store/equipevipvpn.apk"
