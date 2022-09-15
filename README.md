@@ -1,7 +1,8 @@
 # COMANDOS PARA INSTALAR PELO TERMUX
+VIDEO TUTORIAL
+https://youtu.be/ygRGp_Se6kM
 
 Download do termux apk , o da play store não presta
-
 https://drive.google.com/file/d/1vmyqpMuvnHeXwPUbFzgBOIqQ12bf2Jg4/view?usp=sharing
 
 Comandos , digite os comandos de 1 por um para não haver erros
