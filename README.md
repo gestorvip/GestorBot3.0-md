@@ -52,7 +52,7 @@ sh start.sh
 
 Após escanear o qr code pare o bot e faça esses comandos 
 
+sudo npm install -g pm2
 
 pm2 start index.js
 
-sudo npm install -g pm2
