@@ -31,6 +31,8 @@ sudo apt update && sudo apt upgrade
 
 sudo apt install git
 
+sudo npm install
+
 sudo apt install npm
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
