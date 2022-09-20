@@ -32,6 +32,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install git
 
 sudo apt install npm
+
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
@@ -45,10 +46,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 git clone https://github.com/gestorvip/GestorBot3.0-md.git && cd GestorBot3.0-md
 
-
-
 sh start.sh
-
 
 
 Após escanear o qr code pare o bot e faça esses comandos 
