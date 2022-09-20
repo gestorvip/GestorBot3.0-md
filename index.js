@@ -1593,7 +1593,7 @@ rows: [
 {title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
 {title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Dono"}]
 }]
-sendlistA(q, "━━━━━━━━━━━━━━━━━", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\*LINK DO APP*\n*${linkapp}*`, `${server.type}`, "MENU SSH", botaoale)
+sendlistA(q, "━━━━━━━━━━━━━━━━━", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n*LINK DO APP*\n*${linkapp}*`, `${server.type}`, "MENU SSH", botaoale)
 break
 case 'recusarteste':
 if(!SoDono) return reply("Só dono...")
@@ -2292,15 +2292,6 @@ dono5 = body.slice(8)
 nescessario.dono5 = dono5
 fs.writeFileSync('./dono/nescessario.json', JSON.stringify(nescessario, null, '\t'))
 reply(`Agora contem um quinto dono(a) alterado com sucesso para: ${dono5}`)
-break
-
-case 'dono6':
-if (args.length < 1) return
-if (!SoDono  && !isnit && !issupre && !ischyt) return reply(enviar.msg.donosmt)
-dono6 = body.slice(8)
-nescessario.dono6 = dono6
-fs.writeFileSync('./dono/nescessario.json', JSON.stringify(nescessario, null, '\t'))
-reply(`Agora contem um quinto dono(a) alterado com sucesso para: ${dono6}`)
 break
 
 
