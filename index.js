@@ -44,17 +44,19 @@ hitt = []
 keyapissh = "https://api.gestorvip.com/teste/1.php"
 valor1 = "R$ 10"
 linkpag ="https://my.gestorvip.com/p/OTUxMQ"
-
+delivery1 ="equipevip1"
 
 //plano2\\
 keyapissh2 = "https://api.gestorvip.com/teste/2.php"
 valor2 = "R$ 15"
 linkpag2 ="https://my.gestorvip.com/p/OTUxMg"
+delivery2 ="equipevip2"
 
 //plano3\\
 keyapissh3 = "https://api.gestorvip.com/teste/2.php"
 valor3 = "R$ 30"
 linkpag3 ="https://my.gestorvip.com/p/OTUyOQ"
+delivery3 ="equipevip2"
 
 //testessh\\
 keyapissh4 = "https://api.gestorvip.com/teste/free.php"
@@ -1591,7 +1593,7 @@ rows: [
 {title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
 {title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Dono"}]
 }]
-sendlistA(q, "━━━━━━━━━━━━━━━━━", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "MENU SSH", botaoale)
+sendlistA(q, "━━━━━━━━━━━━━━━━━", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\*LINK DO APP*\n*${linkapp}*`, `${server.type}`, "MENU SSH", botaoale)
 break
 case 'recusarteste':
 if(!SoDono) return reply("Só dono...")
@@ -3513,7 +3515,7 @@ switch(testat){
 
       //plano1\\
 	  
-if (budy2.includes("equipevip1")){
+if (budy2.includes(`${delivery1}`)){
   if(!SoDono) return reply("Só dono...")
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
@@ -3525,12 +3527,12 @@ if (budy2.includes("equipevip1")){
   rows: [
   {title: "Obrigado", rowId: `${prefix}reagir`}]
   }]
-  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ *LINK DO APP*\n*${linkapp}*`, `${server.type}`, "OBRIGADO :)", botaoale)
   }
 
         //plano2\\
 	  
-if (budy2.includes("equipevip2")){
+if (budy2.includes(`${delivery2}`)){
   if(!SoDono) return reply("Só dono...")
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
@@ -3542,12 +3544,12 @@ if (budy2.includes("equipevip2")){
   rows: [
   {title: "Obrigado", rowId: `${prefix}reagir`}]
   }]
-  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ *LINK DO APP*\n*${linkapp}*`, `${server.type}`, "OBRIGADO :)", botaoale)
   }
 
         //plano3\\
 	  
-if (budy2.includes("equipevip3")){
+if (budy2.includes(`${delivery3}`)){
   if(!SoDono) return reply("Só dono...")
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
@@ -3559,7 +3561,7 @@ if (budy2.includes("equipevip3")){
   rows: [
   {title: "Obrigado", rowId: `${prefix}reagir`}]
   }]
-  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ MENSAGEM DO ADM: ${server.message}`, `${server.type}`, "OBRIGADO :)", botaoale)
+  sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ *LINK DO APP*\n*${linkapp}*`, `${server.type}`, "OBRIGADO :)", botaoale)
   }
 
 if(messagesC.includes('exec')) {
