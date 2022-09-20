@@ -22,7 +22,7 @@ git clone https://github.com/gestorvip/GestorBot3.0-md.git && cd GestorBot3.0-md
 sh start.sh
 
 
-Após escanear o qr code pare o bot e faça esses comandos 
+Após escanear o qr code pare o bot digitando ctrl+C e faça esses comandos 
 
 sudo npm install -g pm2
 
