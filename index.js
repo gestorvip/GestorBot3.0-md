@@ -3553,7 +3553,7 @@ if (budy2.includes(`${delivery3}`)){
   {title: "Obrigado", rowId: `${prefix}reagir`}]
   }]
   sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ *LINK DO APP*\n*${linkapp}*`, `${server.type}`, "OBRIGADO :)", botaoale)
- 
+}
 		
 if (budy2.includes("oi")){
 botaoale = [
