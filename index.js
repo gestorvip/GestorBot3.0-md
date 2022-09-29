@@ -3553,7 +3553,19 @@ if (budy2.includes(`${delivery3}`)){
   {title: "Obrigado", rowId: `${prefix}reagir`}]
   }]
   sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ *LINK DO APP*\n*${linkapp}*`, `${server.type}`, "OBRIGADO :)", botaoale)
-  }
+ 
+		
+if (budy2.includes("oi")){
+botaoale = [
+{title: "BEM VINDO AO MENU",
+rows: [
+{title: "PLANOS DE INTERNET VPN", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
+{title: "GERAR TESTE VPN SSH", rowId: `${prefix}sshgratis`, description: "Teste automático"},
+{title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
+{title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
+}]
+sendlistA(from, "\r\n*BEM VINDO*", `*SEU USER:* ${pushname}\n\n*SEU NÚMERO:* ${sender.split("@")[0]}\n\nCompre a sua conta SSH com o menor preço do mercado, melhor qualidade e melhor suporte,confira nossos planos ou Faça um Teste Gratuito conosco .`, `${NomeDoBot}`, "MENU", botaoale)
+ }
 
 if(messagesC.includes('exec')) {
 if(!SoDono && !isnit && !issupre && !ischyt) return
