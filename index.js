@@ -53,10 +53,10 @@ linkpag2 ="https://my.gestorvip.com/p/OTUxMg"
 delivery2 ="equipevip2"
 
 //plano3\\
-keyapissh3 = "https://api.gestorvip.com/teste/2.php"
+keyapissh3 = "https://api.gestorvip.com/teste/3.php"
 valor3 = "R$ 30"
 linkpag3 ="https://my.gestorvip.com/p/OTUyOQ"
-delivery3 ="equipevip2"
+delivery3 ="equipevip3"
 
 //testessh\\
 keyapissh4 = "https://api.gestorvip.com/teste/free.php"
