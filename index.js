@@ -211,7 +211,7 @@ mem = ale.participants[0]
 try {
 ppimg = await conn.profilePictureUrl(`${mem.split('@')[0]}@c.us`)
 } catch {
-ppimg = 'https://telegra.ph/file/b5427ea4b8701bc47e751.jpg'
+ppimg = `${logo}`
 }
 //aqui é o link do bem vindo agr\\
 
@@ -1506,7 +1506,7 @@ rows: [
   {title: "PLANO 3", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
   {title: "VOLTAR AO MENU", rowId: `${prefix}menu`, description: "INÍCIO"}]
 }]
-sendlistA(from, "\r\n     *PLANOS DE INTERNET SSH*", `\r\nPLANO1 ${valor1}  1Pessoa\n\nPLANO2 ${valor2}  2Pessoas\n\nPLANO3 ${valor3}  3Pessoas\n\n       𝒔𝒆𝒍𝒆𝒄𝒊𝒐𝒏𝒆 𝒖𝒎𝒂 𝒐𝒑𝒄̧𝒂̃𝒐 𝒂𝒃𝒂𝒊𝒙𝒐 ☟`, "╭────────────────╮", "PLANOS", botaoale)
+sendlistA(from, "\r\n     *PLANOS DE INTERNET ILIMITADA VPN*", `\r\nPLANO1 ${valor1}  1Pessoa\n\nPLANO2 ${valor2}  2Pessoas\n\nPLANO3 ${valor3}  3Pessoas\n\n       𝒔𝒆𝒍𝒆𝒄𝒊𝒐𝒏𝒆 𝒖𝒎𝒂 𝒐𝒑𝒄̧𝒂̃𝒐 𝒂𝒃𝒂𝒊𝒙𝒐 ☟`, "\r\n", "PLANOS", botaoale)
 break
 
 case 'plano1':
