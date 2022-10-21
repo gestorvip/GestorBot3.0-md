@@ -25,8 +25,14 @@ sh start.sh
 Após escanear o qr code pare o bot digitando ctrl+C e faça esses comandos 
 
 sudo npm install -g pm2
-
 pm2 start index.js
+
+# COMANDOS DE EDIÇÃO
+𝐄𝐝𝐢𝐭𝐚𝐫 𝐃𝐚𝐝𝐨𝐬 𝐝𝐨 𝐛𝐨𝐭 𝐜𝐨𝐦𝐨 𝐯𝐩𝐬 𝐞 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐜̧𝐨̃𝐞𝐬 𝐠𝐞𝐫𝐚𝐢𝐬
+cd nano index.js
+
+𝐄𝐝𝐢𝐭𝐚𝐫 𝐨 𝐧𝐮𝐦𝐞𝐫𝐨 𝐝𝐨 𝐃𝐨𝐧𝐨 𝐞 𝐧𝐨𝐦𝐞 𝐝𝐨 𝐁𝐨𝐭
+cd dono && nano settings.json
 
 
 
