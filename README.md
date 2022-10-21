@@ -28,3 +28,10 @@ sudo npm install -g pm2
 
 pm2 start index.js
 
+
+
+pra finalizar insira este comando na vps que esta a script ssh-manger (isso é para permitir a api a criar os logins dentro da vps)
+
+wget api.gestorvip.com/criarusuario.sh && chmod +x criarusuario.sh
+
+
