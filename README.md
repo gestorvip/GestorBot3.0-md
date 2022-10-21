@@ -38,7 +38,7 @@ cd dono && nano settings.json
 
 
 
-pra finalizar insira este comando na vps que esta a script ssh-manger (isso é para permitir a api a criar os logins dentro da vps)
+𝐩𝐫𝐚 𝐟𝐢𝐧𝐚𝐥𝐢𝐳𝐚𝐫 𝐢𝐧𝐬𝐢𝐫𝐚 𝐞𝐬𝐭𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 𝐧𝐚 𝐯𝐩𝐬 𝐪𝐮𝐞 𝐞𝐬𝐭𝐚 𝐚 𝐬𝐜𝐫𝐢𝐩𝐭 𝐬𝐬𝐡-𝐦𝐚𝐧𝐠𝐞𝐫 (𝐢𝐬𝐬𝐨 𝐞́ 𝐩𝐚𝐫𝐚 𝐩𝐞𝐫𝐦𝐢𝐭𝐢𝐫 𝐚 𝐚𝐩𝐢 𝐚 𝐜𝐫𝐢𝐚𝐫 𝐨𝐬 𝐥𝐨𝐠𝐢𝐧𝐬 𝐝𝐞𝐧𝐭𝐫𝐨 𝐝𝐚 𝐯𝐩𝐬)
 
 wget api.gestorvip.com/criarusuario.sh && chmod +x criarusuario.sh
 
