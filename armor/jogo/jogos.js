@@ -297,7 +297,7 @@ embaralhada: 'GNEVAR',
 dica: 'NOME'
 },
 {
-original: 'ALEATORY',
+original: 'Gestorbot',
 embaralhada: 'YRTALOEA',
 dica: 'NOME'
 },

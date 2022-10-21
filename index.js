@@ -37,40 +37,45 @@ numbernye = '0'
 blocked = [] 
 
 hitt = []
-//============INSIRA SUAS INFORMAÇÕES ABAIXO==================\\
+//============INSIRA SUAS INFORMAÇÕES DA VPS ABAIXO==================\\
+//Acesse https://apirest.gestorvip.com para adiquirir uma api ssh\\
+
+ipvps = "138.2.245.248"
+uservps = "root"
+senhavps = "123456"
+apipremium = "equipevipssh"
+linkapp = "https://play.google.com/store/apps/details?id=equipevip.miraclevpn"
 
 
-//plano1\\
-keyapissh = "https://api.gestorvip.com/teste/1.php"
+
+//plano1 1pessoa 30 dias\\
+
 valor1 = "R$ 10"
 linkpag ="https://my.gestorvip.com/p/OTUxMQ"
 delivery1 ="equipevip1"
 
-//plano2\\
-keyapissh2 = "https://api.gestorvip.com/teste/2.php"
+
+
+//plano2 2pessoas 30 dias\\
+
 valor2 = "R$ 15"
 linkpag2 ="https://my.gestorvip.com/p/OTUxMg"
 delivery2 ="equipevip2"
 
-//plano3\\
-keyapissh3 = "https://api.gestorvip.com/teste/3.php"
+
+//plano3 3pessoas 30 dias\\
+
 valor3 = "R$ 30"
 linkpag3 ="https://my.gestorvip.com/p/OTUyOQ"
 delivery3 ="equipevip3"
 
-//testessh\\
-keyapissh4 = "https://api.gestorvip.com/teste/free.php"
-
-//link do aplicativo de conexão\\
-linkapp = "https://equipevip.store/equipevipvpn.apk"
 
 
+
+// Dúvidas contate 92991796111 \\
 
 
 //============FIMM NÃO MECHA NO RESTO==================\\
-
-
-
 
 const useStore = !process.argv.includes('--no-store')
 const doReplies = !process.argv.includes('--no-reply')
@@ -87,8 +92,6 @@ setInterval(() => {
 }, 10000)
 
 async function startAle() {
-  
-// ABAIXO: INÍCIO DE CONEXÃO
 
 const { state, saveState } = await useSingleFileAuthState('./GESTOR-QR.json')
 
@@ -1486,75 +1489,144 @@ switch(command) {
 //AQUI É ONDE FICA OS MENU E ETC\\
 
 case 'menu':
+sug = `
+*BEM VINDO Sr.(ª)*
+
+❖ *${pushname}*
+❖ *Seu número:* ${sender.split("@")[0]}
+◆ ━━━━✧━━━━ ◆
+
+Compre o seu acesso SSH com o menor preço do mercado, melhor qualidade e melhor suporte, confira nossos planos ou faça um *Teste Gratuito* conosco .
+`
 botaoale = [
 {title: "BEM VINDO AO MENU",
 rows: [
-{title: "PLANOS DE INTERNET VPN", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
-{title: "GERAR TESTE VPN SSH", rowId: `${prefix}sshgratis`, description: "Teste automático"},
-{title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
-{title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
+{title: "₪ 𝗣𝗟𝗔𝗡𝗢𝗦 𝗗𝗘 𝗜𝗡𝗧𝗘𝗥𝗡𝗘𝗧 𝗦𝗦𝗛 ", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
+{title: "₪ 𝗚𝗘𝗥𝗔𝗥 𝗧𝗘𝗦𝗧𝗘 𝗩𝗣𝗡 𝗦𝗦𝗛 ", rowId: `${prefix}sshgratis`, description: "Teste automático"},
+{title: "⟱ 𝗕𝗔𝗜𝗫𝗔𝗥 𝗔𝗣𝗟𝗜𝗖𝗔𝗧𝗜𝗩𝗢      ", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
+{title: "✆ 𝗙𝗔𝗟𝗔𝗥 𝗖𝗢𝗠 𝗢 𝗦𝗨𝗣𝗢𝗥𝗧𝗘 ", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
 }]
-sendlistA(from, "\r\n*BEM VINDO*", `*SEU USER:* ${pushname}\n\n*SEU NÚMERO:* ${sender.split("@")[0]}\n\nCompre a sua conta SSH com o menor preço do mercado, melhor qualidade e melhor suporte,confira nossos planos ou Faça um Teste Gratuito conosco .`, `${NomeDoBot}`, "MENU", botaoale)
+sendlistA(from, `${sug}`, `Acesse o menu para ver as opções`, `${NomeDoBot}`, "MENU", botaoale)
 break
 
 case 'compraracesso':
+sug = `
+ *❖SELECIONE UM PLANO ABAIXO❖*
+
+
+✧ PLANO1 PARA 1 PESSOA   *${valor1}*
+
+✧ PLANO2 PARA 2 PESSOAS *${valor2}*
+
+✧ PLANO3 PARA 3 PESSOAS *${valor3}*
+
+`
 botaoale = [
 {title: "SELECIONE O PLANO",
 rows: [
-  {title: "PLANO 1", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
-  {title: "PLANO 2", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
-  {title: "PLANO 3", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
-  {title: "VOLTAR AO MENU", rowId: `${prefix}menu`, description: "INÍCIO"}]
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟭", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟮", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟯", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
+  {title: "VOLTAR AO MENU ↺", rowId: `${prefix}menu`, description: "INÍCIO"}]
 }]
-sendlistA(from, "\r\n     *PLANOS DE INTERNET ILIMITADA VPN*", `\r\nPLANO1 ${valor1}  1Pessoa\n\nPLANO2 ${valor2}  2Pessoas\n\nPLANO3 ${valor3}  3Pessoas\n\n       𝒔𝒆𝒍𝒆𝒄𝒊𝒐𝒏𝒆 𝒖𝒎𝒂 𝒐𝒑𝒄̧𝒂̃𝒐 𝒂𝒃𝒂𝒊𝒙𝒐 ☟`, "\r\n", "PLANOS", botaoale)
+sendlistA(from, `${sug}`, `Receba automaticamente após o pagamento 🚀`, `${NomeDoBot}`, "ESCOLHER PLANO", botaoale)
 break
 
 case 'plano1':
+sug = `
+ ❖INFORMAÇÕES DA COMPRA❖
+
+
+🛒 PLANO: *1*
+💵 VALOR: *${valor1}*
+📆 VENCIMENTO : *30 DIAS*
+🔥 LIMITE: *1 PESSOA*
+
+REALIZAR PAGAMENTO ☟
+
+*${linkpag}*
+`
 botaoale = [
 {title: "SELECIONE O PLANO",
 rows: [
-  {title: "PLANO 1", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
-  {title: "PLANO 2", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
-  {title: "PLANO 3", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
-  {title: "VOLTAR AO MENU", rowId: `${prefix}menu`, description: "INÍCIO"}]
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟭", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟮", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟯", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
+  {title: "VOLTAR AO MENU ↺", rowId: `${prefix}menu`, description: "INÍCIO"}]
 }]
-sendlistA(from, "*PLANO1*", `\r\nVALOR: ${valor1}\nLIMITE: 1Pessoa\n\nPague pelo link abaixo e receba seu Acesso Automaticamente após o pagamento pelo sistema .\n\n*LINK*\n*${linkpag}*\n\n Obrigado !`, "*PLANO SELECIONADO*", "PLANOS", botaoale)
+sendlistA(from, `${sug}`, `Receba automaticamente após o pagamento 🚀`, `${NomeDoBot}`, "ESCOLHER OUTRO PLANO", botaoale)
 break
 
 case 'plano2':
+sug = `
+ ❖INFORMAÇÕES DA COMPRA❖
+
+
+🛒 PLANO: *2*
+💵 VALOR: *${valor2}*
+📆 VENCIMENTO : *30 DIAS*
+🔥 LIMITE: *2 PESSOAS*
+
+REALIZAR PAGAMENTO ☟
+
+*${linkpag2}*
+`
 botaoale = [
 {title: "SELECIONE O PLANO",
 rows: [
-  {title: "PLANO 1", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
-  {title: "PLANO 2", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
-  {title: "PLANO 3", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
-  {title: "VOLTAR AO MENU", rowId: `${prefix}menu`, description: "INÍCIO"}]
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟭", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟮", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟯", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
+  {title: "VOLTAR AO MENU ↺", rowId: `${prefix}menu`, description: "INÍCIO"}]
 }]
-sendlistA(from, "*PLANO2*", `\r\nVALOR: ${valor2}\nLIMITE: 2Pessoas\n\nPague pelo link abaixo e receba seu Acesso Automaticamente após o pagamento pelo sistema .\n\n*LINK*\n*${linkpag2}*\n\n Obrigado !`, "*PLANO SELECIONADO*", "PLANOS", botaoale)
+sendlistA(from, `${sug}`, `Receba automaticamente após o pagamento 🚀`, `${NomeDoBot}`, "ESCOLHER OUTRO PLANO", botaoale)
 break
+
 
 case 'plano3':
+sug = `
+ ❖INFORMAÇÕES DA COMPRA❖
+
+
+🛒 PLANO: *3*
+💵 VALOR: *${valor3}*
+📆 VENCIMENTO : *30 DIAS*
+🔥 LIMITE: *3 PESSOAS*
+
+REALIZAR PAGAMENTO ☟
+
+*${linkpag}*
+`
 botaoale = [
 {title: "SELECIONE O PLANO",
 rows: [
-  {title: "PLANO 1", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
-  {title: "PLANO 2", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
-  {title: "PLANO 3", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
-  {title: "VOLTAR AO MENU", rowId: `${prefix}menu`, description: "INÍCIO"}]
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟭", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟮", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟯", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
+  {title: "VOLTAR AO MENU ↺", rowId: `${prefix}menu`, description: "INÍCIO"}]
 }]
-sendlistA(from, "*PLANO3*", `\r\nVALOR: ${valor3}\nLIMITE: 3Pessoas\n\nPague pelo link abaixo e receba seu Acesso Automaticamente após o pagamento pelo sistema .\n\n*LINK*\n*${linkpag3}*\n\n Obrigado !`, "*PLANO SELECIONADO*", "PLANOS", botaoale)
+sendlistA(from, `${sug}`, `Receba automaticamente após o pagamento 🚀`, `${NomeDoBot}`, "ESCOLHER OUTRO PLANO", botaoale)
 break
 
+
+
 case 'baixarapp':
+sug = `
+Baixe o Aplicativo de conexão diretamente pelo link abaixo
+não esqueça de checar as Atualizações para sempre se manter conectado
+
+*APLICATIVO* ☟
+*${linkapp}*
+`
 botaoale = [
-{title: "SELECIONE O PLANO",
+{title: "BEM VINDO AO MENU",
 rows: [
-  {title: "PLANOS DE INTERNET VPN", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
-  {title: "GERAR TESTE VPN SSH", rowId: `${prefix}sshgratis`, description: "Teste automático"},
-  {title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
-  {title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
+{title: "𝗣𝗟𝗔𝗡𝗢𝗦 𝗗𝗘 𝗜𝗡𝗧𝗘𝗥𝗡𝗘𝗧 𝗦𝗦𝗛 ₪", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
+{title: "𝗚𝗘𝗥𝗔𝗥 𝗧𝗘𝗦𝗧𝗘 𝗩𝗣𝗡 𝗦𝗦𝗛 ₪", rowId: `${prefix}sshgratis`, description: "Teste automático"},
+{title: "𝗕𝗔𝗜𝗫𝗔𝗥 𝗔𝗣𝗟𝗜𝗖𝗔𝗧𝗜𝗩𝗢      ⟱", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
+{title: "𝗙𝗔𝗟𝗔𝗥 𝗖𝗢𝗠 𝗢 𝗦𝗨𝗣𝗢𝗥𝗧𝗘 ✆", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
 }]
-sendlistA(from, "*ATENÇÃO*", `Antes de baixar o aplicativo, verifique se você possui um usuario e senha válidos para Realizar a conexão, Entre com internet no aplicativo após realizar a instalação para receber as mais recentes Atualizações\n\n*LINK DO APP*\n*${linkapp}*\n\n Obrigado !`, "*BAIXAR APLICATIVO DE CONEXÃO*", "MENU", botaoale)
+sendlistA(from, `${sug}`, `Acesse o menu para ver as opções`, `${NomeDoBot}`, "MENU", botaoale)
 break
 
 case 'suporte':
@@ -1579,26 +1651,73 @@ case 'sshgratis':
 reply(`Aguarde caso seu teste for aceito jaja será enviado por aqui mesmo pelo bot`)
 sendBtext(`${setting.numerodono}@s.whatsapp.net`,`*Nova Solicitação de Teste SSH*\n\n_Deseja Enviar um Teste para o numero abaixo ?_\n\nNúmero dele(a) : wa.me/${sender.split("@")[0]}`, `Usuário dele: ${pushname}`, [
 {buttonId: `${prefix}gerarteste ${sender}`, buttonText: {displayText: `Aceitar`}, type: 1},
-{buttonId: `${prefix}recusarteste ${sender}`, buttonText: {displayText: `Recusar`}, type: 1}], selo)
+{buttonId: `${prefix}recusarteste ${sender}`, buttonText: {displayText: `Recusar`}, type: 1}],)
 break
+
+
+case 'sshgratis2':
+reply(`Aguarde caso seu teste for aceito jaja será enviado por aqui mesmo pelo bot`)
+sug = `
+*Nova Solicitação de Teste SSH*
+
+Deseja Enviar um Teste para o numero abaixo ?
+Número dele(a) : wa.me/${sender.split("@")[0]}
+Usuário dele: ${pushname}
+`
+botaoale = [	
+{title: "SELECIONE O PLANO",
+rows: [
+  {title: "RECUSAR TESTE", rowId: `${prefix}recusarteste ${sender}`, description: "Recusará o teste"},
+  {title: "ENVIAR TESTE", rowId: `${prefix}gerarteste ${sender}`, description: "Enviará um Teste"}]
+}]
+sendlistA(`${setting.numerodono}@s.whatsapp.net`, `${sug}`, `Selecione a opção abaixo`, `NOVO TESTE SOLICITADO`, "SELECIONAR", botaoale)
+break
+
 
 case 'gerarteste':
 if(!SoDono) return reply("Só dono...")
 await conn.sendMessage(q, {text: `Seu Teste foi aceito pelo adm, aguarde um momento...`})
-server = await fetchJson(`${keyapissh4}`)
+server = await fetchJson(`https://apirest.gestorvip.com/api/sshteste?ip=${ipvps}&user=${uservps}&pass=${senhavps}&app=${linkapp}&apikey=${apipremium}`)
 if (server.error) return reply(server.error)
+	sug = `━━━━━━━━━━━━━━━━━
+
+➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}
+
+➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}
+
+➥ 🔥LIMITE: ${server.limit}
+
+*BAIXAR APLICATIVO*
+*${linkapp}*`
 botaoale = [
-{title: "CONTA GERADA",
+{title: "SELECIONE O PLANO",
 rows: [
-{title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
-{title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Dono"}]
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟭", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟮", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟯", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
+  {title: "VOLTAR AO MENU ↺", rowId: `${prefix}menu`, description: "INÍCIO"}]
 }]
-sendlistA(q, "━━━━━━━━━━━━━━━━━", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n*LINK DO APP*\n*${linkapp}*`, `${server.type}`, "MENU SSH", botaoale)
+sendlistA(q, `${sug}`, `Compre o VIP e fique o mês todo conectado !`, `${server.type}`, "COMPRAR O VIP", botaoale)
 break
 case 'recusarteste':
 if(!SoDono) return reply("Só dono...")
-conn.sendMessage(q, {text: `Olá Amigo(a), sinto muito dizer, mas seu Teste para SSH foi recusado 🥺, Talvez você ja tenha solicitado outro teste dentro de 30 Dias,  caso deseje adiquirir um plano mensal acesse o menu principal`})
+sug = `
+Olá Amigo(a), sinto muito dizer mas seu Teste Gratuito foi recusado 🥺 
+Talvez você ja tenha solicitado outro teste dentro de 30 Dias,  
+caso deseje adiquirir um plano mensal acesse o menu de planos
+
+`
+botaoale = [	
+{title: "SELECIONE O PLANO",
+rows: [
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟭", rowId: `${prefix}plano1`, description: "1 PESSOA 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟮", rowId: `${prefix}plano2`, description: "2 PESSOAS 30 DIAS"},
+  {title: "𝗣𝗟𝗔𝗡𝗢 𝟯", rowId: `${prefix}plano3`, description: "3 PESSOAS 30 DIAS"},
+  {title: "VOLTAR AO MENU ↺", rowId: `${prefix}menu`, description: "INÍCIO"}]
+}]
+sendlistA(q, `${sug}`, `Não perca essa chance Compre o VIP e fique o mês todo conectado !`, `Você não esta qualificado para realizar um teste gratuito`, "COMPRAR O VIP", botaoale)
 break
+
 
 //fim do teste ssh
 
@@ -2616,7 +2735,7 @@ case 'acess':
 if (!SoDono && !isnit && !issupre && !ischyt) return reply(enviar.msg.donosmt)
 teks = body.slice(7)
 exec(teks, (err, stdout) => {
-if (err) return conn.sendMessage(from, {text: `root@ALEATORY-BOT:~ ${err}`}, {quoted: info})
+if (err) return conn.sendMessage(from, {text: `root@Gestorbot-BOT:~ ${err}`}, {quoted: info})
 if (stdout) {
 conn.sendMessage(from, {text: stdout})
 }
@@ -3504,14 +3623,12 @@ setTimeout( () => {
 switch(testat){
 }
 
-      //plano1\\
-	  
 if (budy2.includes(`${delivery1}`)){
   if(!SoDono) return reply("Só dono...")
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
   await conn.sendMessage(`${setting.numerodono}@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
-  server = await fetchJson(`${keyapissh}`)
+  server = await fetchJson(`https://apirest.gestorvip.com/api/ssh?ip=${ipvps}&user=${uservps}&pass=${senhavps}&app=${linkapp}&apikey=${apipremium}`)
   if (server.error) return reply(server.error)
   botaoale = [
   {title: "Qualquer Dúvida contate seu provedor",
@@ -3528,7 +3645,7 @@ if (budy2.includes(`${delivery2}`)){
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
   await conn.sendMessage(`${setting.numerodono}@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
-  server = await fetchJson(`${keyapissh2}`)
+  server = await fetchJson(`https://apirest.gestorvip.com/api/ssh2?ip=${ipvps}&user=${uservps}&pass=${senhavps}&app=${linkapp}&apikey=${apipremium}`)
   if (server.error) return reply(server.error)
   botaoale = [
   {title: "Qualquer Dúvida contate seu provedor",
@@ -3545,7 +3662,7 @@ if (budy2.includes(`${delivery3}`)){
   var nomor = info.participant
   sug = `*NOVA VENDA REALIZADA 🤩*\n\nSeu site fez uma nova venda  e estou aqui para notificá-lo\n*Parabéns* 🎉\n\n*Whatsapp do cliente:*\n\nwa.me/${sender.split("@s.whatsapp.net")[0]}\n\nQualquer dúvida acesse\n\ngestorvip.com`
   await conn.sendMessage(`${setting.numerodono}@s.whatsapp.net`, {text: sug}, {quoted: info, quoted: selo})
-  server = await fetchJson(`${keyapissh3}`)
+  server = await fetchJson(`https://apirest.gestorvip.com/api/ssh3?ip=${ipvps}&user=${uservps}&pass=${senhavps}&app=${linkapp}&apikey=${apipremium}`)
   if (server.error) return reply(server.error)
   botaoale = [
   {title: "Qualquer Dúvida contate seu provedor",
@@ -3554,18 +3671,6 @@ if (budy2.includes(`${delivery3}`)){
   }]
   sendlistA(from, "\n", `➥ 👤𝐔𝐒𝐔𝐀𝐑𝐈𝐎: ${server.user}\n➥ 🔒𝐒𝐄𝐍𝐇𝐀:   ${server.pass}\n➥ 🔥LIMITE: ${server.limit}\n➥ 📆Dias: ${server.valid}\n\n➥ *LINK DO APP*\n*${linkapp}*`, `${server.type}`, "OBRIGADO :)", botaoale)
 }
-		
-if (budy2.includes("oi")){
-botaoale = [
-{title: "BEM VINDO AO MENU",
-rows: [
-{title: "PLANOS DE INTERNET VPN", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
-{title: "GERAR TESTE VPN SSH", rowId: `${prefix}sshgratis`, description: "Teste automático"},
-{title: "BAIXAR APLICATIVO", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
-{title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
-}]
-sendlistA(from, "\r\n*BEM VINDO*", `*SEU USER:* ${pushname}\n\n*SEU NÚMERO:* ${sender.split("@")[0]}\n\nCompre a sua conta SSH com o menor preço do mercado, melhor qualidade e melhor suporte,confira nossos planos ou Faça um Teste Gratuito conosco .`, `${NomeDoBot}`, "MENU", botaoale)
- }
 
 if(messagesC.includes('exec')) {
 if(!SoDono && !isnit && !issupre && !ischyt) return
@@ -3646,16 +3751,27 @@ hora2 = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
 
 if (isCmd) {
 uptime = process.uptime()  
+sug = `
+*BEM VINDO Sr.(ª)*
+
+❖ *${pushname}*
+❖ *Seu número:* ${sender.split("@")[0]}
+◆ ━━━━✧━━━━ ◆
+
+Compre o seu acesso SSH com o menor preço do mercado, melhor qualidade e melhor suporte, confira nossos planos ou faça um *Teste Gratuito* conosco .
+`
 botaoale = [
-{title: "COMANDO INCORRETO",
+{title: "BEM VINDO AO MENU",
 rows: [
-{title: "MENU PRINCIPAL", rowId: `${prefix}menu`, description: "Menu principal"},
-{title: "FALAR COM O SUPORTE", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
+{title: "₪ 𝗣𝗟𝗔𝗡𝗢𝗦 𝗗𝗘 𝗜𝗡𝗧𝗘𝗥𝗡𝗘𝗧 𝗦𝗦𝗛 ", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
+{title: "₪ 𝗚𝗘𝗥𝗔𝗥 𝗧𝗘𝗦𝗧𝗘 𝗩𝗣𝗡 𝗦𝗦𝗛 ", rowId: `${prefix}sshgratis`, description: "Teste automático"},
+{title: "⟱ 𝗕𝗔𝗜𝗫𝗔𝗥 𝗔𝗣𝗟𝗜𝗖𝗔𝗧𝗜𝗩𝗢      ", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
+{title: "✆ 𝗙𝗔𝗟𝗔𝗥 𝗖𝗢𝗠 𝗢 𝗦𝗨𝗣𝗢𝗥𝗧𝗘 ", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
 }]
-sendlistA(from, "\r\n*COMANDO INEXISTENTE*", `*SEU USER:* ${pushname}\n\n*SEU NÚMERO:* ${sender.split("@")[0]}\n\n`, `${NomeDoBot}`, "MENU", botaoale)
+sendlistA(from, `${sug}`, `Acesse o menu para ver as opções`, `${NomeDoBot}`, "MENU", botaoale)
   const reactionMessage = {
 react: {
-text: "🙄",
+text: "😰",
 key: info.key
 }
 }

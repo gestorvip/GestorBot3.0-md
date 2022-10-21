@@ -96,7 +96,7 @@ CRÉDITOS DO BEM VINDO :
 Brizas-Bot = Ian.
 
 
-Assinado: Aleatory Bot. 
+Assinado: Gestorbot Bot. 
 
 -----------------------------
 `
