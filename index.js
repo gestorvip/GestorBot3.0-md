@@ -1595,7 +1595,7 @@ sug = `
 
 REALIZAR PAGAMENTO ☟
 
-*${linkpag}*
+*${linkpag3}*
 `
 botaoale = [
 {title: "SELECIONE O PLANO",
