@@ -24,8 +24,7 @@ sh start.sh
 
 Após escanear o qr code pare o bot digitando ctrl+C e faça esses comandos 
 
-sudo npm install -g pm2
-pm2 start index.js
+sudo npm install -g pm2 && pm2 start index.js
 
 # COMANDOS DE EDIÇÃO
 𝐄𝐝𝐢𝐭𝐚𝐫 𝐃𝐚𝐝𝐨𝐬 𝐝𝐨 𝐛𝐨𝐭 𝐜𝐨𝐦𝐨 𝐯𝐩𝐬 𝐞 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐜̧𝐨̃𝐞𝐬 𝐠𝐞𝐫𝐚𝐢𝐬
