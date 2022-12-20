@@ -1481,7 +1481,33 @@ conn.sendMessage(from, {audio: bla, mimetype: 'audio/mp4', ptt:true}, {quoted:in
 break
 }
 
+var prmsg = JSON.parse(fs.readFileSync("./datab/primeiramsg.json"))
+if(!isGroup && !prmsg.includes(sender)) {
+if(menu_audio === true) {
+audiomenu = await fs.readFileSync("./audios/menucmd.mp3")
+conn.sendMessage(from, {audio: audiomenu, mimetype: 'audio/mp4', ptt:true}, {quoted: info})
+}
+sug = `
+*BEM VINDO Sr.(ª)*
 
+❖ *${pushname}*
+❖ *Seu número:* ${sender.split("@")[0]}
+◆ ━━━━✧━━━━ ◆
+
+Compre o seu acesso SSH com o menor preço do mercado, melhor qualidade e melhor suporte, confira nossos planos ou faça um *Teste Gratuito* conosco .
+`
+botaoale = [
+{title: "BEM VINDO AO MENU",
+rows: [
+{title: "₪ 𝗣𝗟𝗔𝗡𝗢𝗦 𝗗𝗘 𝗜𝗡𝗧𝗘𝗥𝗡𝗘𝗧 𝗦𝗦𝗛 ", rowId: `${prefix}compraracesso`, description: "compre seu acesso vip"},
+{title: "₪ 𝗚𝗘𝗥𝗔𝗥 𝗧𝗘𝗦𝗧𝗘 𝗩𝗣𝗡 𝗦𝗦𝗛 ", rowId: `${prefix}sshgratis`, description: "Teste automático"},
+{title: "⟱ 𝗕𝗔𝗜𝗫𝗔𝗥 𝗔𝗣𝗟𝗜𝗖𝗔𝗧𝗜𝗩𝗢      ", rowId: `${prefix}baixarapp`, description: "Aplicativo de conexão"},
+{title: "✆ 𝗙𝗔𝗟𝗔𝗥 𝗖𝗢𝗠 𝗢 𝗦𝗨𝗣𝗢𝗥𝗧𝗘 ", rowId: `${prefix}suporte`, description: "Notificar o dono"}]
+}]
+sendlistA(from, `${sug}`, `Acesse o menu para ver as opções`, `${NomeDoBot}`, "MENU", botaoale)
+prmsg.push(sender)
+fs.writeFileSync("./datab/primeiramsg.json", JSON.stringify(prmsg)) 
+}
 
 //INICIO DE COMANDO DE PREFIXO
 switch(command) {
